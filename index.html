@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -174,6 +175,20 @@
 
     .gallery-grid img:hover { transform: scale(1.02); }
 
+    /* Center the Reception card */
+    .events-grid .event-card:last-child {
+      grid-column: 1 / -1;
+      width: calc(50% - 12.5px);
+      justify-self: center;
+    }
+
+    /* Mobile responsive layout */
+    @media (max-width: 700px) {
+      .events-grid .event-card:last-child {
+        grid-column: auto;
+        width: 100%;
+      }
+    }
     .venue {
       text-align: center;
       background: #f3e4dc;
@@ -304,21 +319,44 @@
         <p>We would be delighted to have you with us for these special moments.</p>
       </div>
 
-      <div class="events-grid">
-        <article class="event-card">
-          <div class="event-icon">🌸</div>
-          <h3>Wedding Ceremony</h3>
-          <p class="time">14 December 2026 · 05:22 PM</p>
-          <p>Witness the beginning of our forever as we exchange our vows.</p>
-        </article>
-        <article class="event-card">
-          <div class="event-icon">✨</div>
-          <h3>Reception</h3>
-          <p class="time">14 December 2026 · 7:30 PM</p>
-          <p>An evening of food, music, laughter, and unforgettable memories.</p>
-        </article>
-      </div>
-    </section>
+      
+<div class="events-grid">
+
+
+  <!-- Haldi Ceremony -->
+  <article class="event-card">
+    <div class="event-icon">🌼</div>
+    <h3>Haldi Ceremony</h3>
+    <p class="time">11 December 2026 · [Add Time]</p>
+    <p>
+      Join us for a joyful celebration filled with sunshine,
+      turmeric, laughter, and blessings as we prepare for our big day.
+    </p>
+  </article>
+
+  <!-- Wedding Ceremony -->
+  <article class="event-card">
+    <div class="event-icon">🌸</div>
+    <h3>Wedding Ceremony</h3>
+    <p class="time">14 December 2026 · 05:22 PM</p>
+    <p>
+      Witness the beginning of our forever as we exchange our vows.
+    </p>
+  </article>
+
+  <!-- Reception -->
+  <article class="event-card">
+    <div class="event-icon">✨</div>
+    <h3>Reception</h3>
+    <p class="time">14 December 2026 · 7:30 PM</p>
+    <p>
+      An evening of food, music, laughter, and unforgettable memories.
+    </p>
+  </article>
+
+</div>
+
+	
 
     <section id="gallery">
       <div class="section-heading">
@@ -340,25 +378,49 @@
       </div>
     </section>
 
-    <section class="venue" id="venue">
-      <div class="section-heading">
-        <p class="eyebrow">We saved you a seat</p>
-        <h2>Venue &amp; Details</h2>
-      </div>
-      <div class="venue-card">
-        <h3>Madhuram Palace</h3>
-        <p>Thane kasarvadavli , Mumbai, Maharashtra</p>
-        <p><strong>Wedding:</strong> 5:22 PM</p>
-        <p><strong>Reception:</strong> 7:30 PM</p>
-        <a
-          class="button"
-          href="https://www.google.com/maps/search/?api=1&query=Madhuram+Palace+Thane+Mumbai"
-          target="_blank"
-          rel="noopener noreferrer">
-          Get Directions
-        </a>
-      </div>
-    </section>
+   <section class="venue" id="venue">
+  <div class="section-heading">
+    <p class="eyebrow">We saved you a seat</p>
+    <h2>Venue &amp; Details</h2>
+    <p>Find your way to our special celebrations.</p>
+  </div>
+
+  <div class="venue-card">
+
+    <!-- Haldi Venue -->
+    <h3>Haldi Ceremony</h3>
+    <p>
+      Bldg No: 220, Room No: 504, A-Wing,<br>
+      Vaibhavlaxmi Central Park,<br>
+      Kannamwar Nagar 2, Vikhroli East,<br>
+      Mumbai - 400083, Maharashtra.
+    </p>
+
+    <a class="button"
+       href="https://www.google.com/maps/search/?api=1&query=Vaibhavlaxmi+Central+Park+Kannamwar+Nagar+2+Vikhroli+East+Mumbai+400083"
+       target="_blank"
+       rel="noopener noreferrer">
+       Haldi Location
+    </a>
+
+    <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eadbd1;">
+
+    <!-- Wedding and Reception Venue -->
+    <h3>Wedding &amp; Reception</h3>
+    <p><strong>Madhuram Palace</strong></p>
+    <p>Thane Kasarvadavli, Mumbai, Maharashtra</p>
+    <p><strong>Wedding:</strong> 5:22 PM</p>
+    <p><strong>Reception:</strong> 7:30 PM</p>
+
+    <a class="button"
+       href="https://www.google.com/maps/search/?api=1&query=Madhuram+Palace+Thane+Mumbai"
+       target="_blank"
+       rel="noopener noreferrer">
+       Wedding Venue Location
+    </a>
+
+  </div>
+</section>
 
     <section id="rsvp">
       <div class="section-heading">
